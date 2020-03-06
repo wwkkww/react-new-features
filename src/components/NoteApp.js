@@ -42,8 +42,9 @@ const NoteApp = () => {
       <h1>Notes</h1>
       {/* <NoteList notes={notes} removeNote={removeNote} /> */}
       {/* <NoteList removeNote={removeNote} /> */}
+      {/* <AddNoteForm dispatch={dispatch} /> */}
       <NoteList />
-      <AddNoteForm dispatch={dispatch} />
+      <AddNoteForm />
     </NotesContext.Provider >
   )
 }
