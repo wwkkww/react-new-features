@@ -32,16 +32,17 @@ const NoteApp = () => {
   //   setBody("")
   // }
 
-  const removeNote = title => {
-    // setNotes(notes.filter(note => note.Title !== title))
-    dispatch({ type: 'REMOVE_NOTE', Title: title })
-  }
+  // const removeNote = title => {
+  //   // setNotes(notes.filter(note => note.Title !== title))
+  //   dispatch({ type: 'REMOVE_NOTE', Title: title })
+  // }
 
   return (
     <NotesContext.Provider value={{ notes, dispatch }} >
       <h1>Notes</h1>
       {/* <NoteList notes={notes} removeNote={removeNote} /> */}
-      <NoteList removeNote={removeNote} />
+      {/* <NoteList removeNote={removeNote} /> */}
+      <NoteList />
       <AddNoteForm dispatch={dispatch} />
     </NotesContext.Provider >
   )
