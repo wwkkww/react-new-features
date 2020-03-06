@@ -10,7 +10,7 @@ const Note = ({ note }) => {
   //   }
   // }, [])
 
-  const { dispatch } = useContext(NotesContext)
+  const { dispatch } = useContext(NotesContext) // to consume (dispatch)
 
   return (
     <div>

@@ -3,7 +3,7 @@ import Note from './Note';
 import NotesContext from '../context/notes-context';
 
 const NoteList = ({ removeNote }) => {
-  const { notes } = useContext(NotesContext)
+  const { notes } = useContext(NotesContext) // to consume (notes)
   return (
     notes.map((note) => (
       <Note key={note.Title} note={note} />

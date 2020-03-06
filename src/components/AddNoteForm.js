@@ -5,7 +5,7 @@ const AddNoteForm = () => {
   const [title, setTitle] = useState("")
   const [body, setBody] = useState("")
 
-  const { dispatch } = useContext(NotesContext);
+  const { dispatch } = useContext(NotesContext); // to consume (dispatch)
 
   const addNote = (e) => {
     e.preventDefault();
@@ -18,16 +18,16 @@ const AddNoteForm = () => {
   }
 
   return (
-    <div>
+    <>
       <p>Add Note</p>
       <form onSubmit={addNote}>
         <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
         <br />
-        <textarea name="body" id="body" cols="30" rows="10" value={body} onChange={e => setBody(e.target.value)} />
+        <textarea name="body" id="body" cols="20" rows="3" value={body} onChange={e => setBody(e.target.value)} />
         <br /><br />
         <button>Add</button>
       </form>
-    </div>
+    </>
   );
 };
 
