@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import notesReducer from '../reducers/notes';
 import NoteList from './NoteList';
 import AddNoteForm from './AddNoteForm';
+import NotesContext from '../context/notes-context';
 
 const NoteApp = () => {
   // const [notes, setNotes] = useState([])
@@ -37,11 +38,11 @@ const NoteApp = () => {
   }
 
   return (
-    <div>
+    <NotesContext.Provider>
       <h1>Notes</h1>
       <NoteList notes={notes} removeNote={removeNote} />
       <AddNoteForm dispatch={dispatch} />
-    </div>
+    </NotesContext.Provider>
   )
 }
 
